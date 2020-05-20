@@ -11,7 +11,7 @@ WORKDIR /ros2_dotnet_ws
 RUN wget https://raw.githubusercontent.com/ros2-dotnet/ros2_dotnet/master/ros2_dotnet.repos
 RUN vcs import src < ros2_dotnet.repos
 WORKDIR /ros2_dotnet_ws/src
-# ToDo : add git clone lines for the custom message
+# ToDo : add git clone lines for the additional message package
 WORKDIR /ros2_dotnet_ws
 RUN rosdep install -y -r -i --from-paths src --ignore-src --rosdistro eloquent
 RUN ["/bin/bash", "-c", "source /opt/ros/eloquent/setup.bash && colcon build --event-handlers console_cohesion+ console_package_list+"]
@@ -56,3 +56,4 @@ RUN cp /ros2_dotnet_ws/install/visualization_msgs/lib/libvisualization_msgs__dot
 # copy files from unique_identifier_msgs
 RUN cp /ros2_dotnet_ws/install/unique_identifier_msgs/lib/unique_identifier_msgs/dotnet/unique_identifier_msgs_assemblies.dll /UnityRclDotnet
 RUN cp /ros2_dotnet_ws/install/unique_identifier_msgs/lib/libunique_identifier_msgs__dotnetext_native.so /UnityRclDotnet
+# TODO: copy files from additional message types
