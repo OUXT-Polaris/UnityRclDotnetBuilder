@@ -23,6 +23,7 @@ RUN cp /ros2_dotnet_ws/install/rcldotnet/lib/librcldotnet_node_native.so /UnityR
 RUN cp /ros2_dotnet_ws/install/rcldotnet/lib/librcldotnet_publisher_native.so /UnityRclDotnet
 RUN cp /ros2_dotnet_ws/install/rcldotnet/lib/rcldotnet/dotnet/rcldotnet_assemblies.dll /UnityRclDotnet
 RUN cp /ros2_dotnet_ws/install/rcldotnet/lib/rcldotnet/dotnet/rcldotnet_common.dll /UnityRclDotnet
+RUN cp /ros2_dotnet_ws/install/builtin_interfaces/lib/libbuiltin_interfaces__dotnetext_native.so /UnityRclDotnet
 # copy files from std_msgs
 RUN cp /ros2_dotnet_ws/install/std_msgs/lib/std_msgs/dotnet/std_msgs_assemblies.dll /UnityRclDotnet
 RUN cp /ros2_dotnet_ws/install/std_msgs/lib/libstd_msgs__dotnetext_native.so /UnityRclDotnet
