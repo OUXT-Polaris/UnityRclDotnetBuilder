@@ -26,3 +26,4 @@ RUN rosdep update
 RUN rosdep install -y -r -i --from-paths src --ignore-src --rosdistro eloquent
 RUN apt-get install -y gcc g++
 RUN ["/bin/bash", "-c", "source /opt/ros/eloquent/setup.bash && colcon build --event-handlers console_cohesion+ console_package_list+"]
+RUN ["/bin/bash", "-c", "source /opt/ros/eloquent/setup.bash && source /ros2_dotnet_ws/install/local_setup.bash && python3 create_unity_plugin.py"]
