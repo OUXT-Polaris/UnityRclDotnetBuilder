@@ -15,7 +15,8 @@ RUN rm -rf /ros2_dotnet_ws/src/ros2_dotnet/ros2_dotnet
 WORKDIR /ros2_dotnet_ws/src/ros2_dotnet/
 RUN git clone https://github.com/OUXT-Polaris/ros2_dotnet.git
 WORKDIR /ros2_dotnet_ws/src/ros2_dotnet/ros2_dotnet/
-RUN git checkout collections
+RUN git fetch --all
+RUN git checkout feature/sequence_type
 WORKDIR /ros2_dotnet_ws/src
 # ToDo : add git clone lines for the additional message package
 WORKDIR /ros2_dotnet_ws
